@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystore</title>
+    <style>
+        #img
+        {
+            width: 230px;
+            height: 200px;
+            margin-top: 2px;
+            margin-bottom: 10px;
+            margin-left: 25px;
+            margin-right: 10px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px black;
+            
+        }
+
+        #b1
+        {
+            background-color: antiquewhite;
+        }
+
+        #h1
+        {
+            font-size: 40px;
+            font-family:'Trebuchet MS';
+            color: brown;
+        }
+        
+        #d1
+        {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: 0.5px solid black;
+            border-radius: 20px;
+            width: 450px;
+            height: 350px;
+            background-color: whitesmoke;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        #h5,#p
+        {
+            font-size: 18px;
+            font-family:'Nirmala UI';
+        }
+    </style>
+</head>
+<body id="b1">
+
+    {% extends 'navbar.html' %}
+    
+    
+    {% block content %}
+    
+    
+    <div class="container">
+        <div class="row">
+        {% for item in items %}
+        <div class="col-md-4">
+        <div class="card" style="width: 18rem;" id="d1">
+            <img src="{{item.img}}" class="card-img-top" alt="..." id="img">
+            <div class="card-body">
+              <h5 class="card-title" id="h5">Toran: {{item.name}}</h5>
+              <p class="card-text" id="p"><b>Price: {{item.price}}/-</b></p>
+              <a href="/order" class="btn btn-info border rounded">Order</a>
+              <a href="{{item.img}}" class="btn btn-info border rounded">View</a>
+            </div>
+          </div>
+        </div>  
+    
+    
+    {% endfor %}
+
+    {% endblock %}
+    </div>
+    </div>
+
+</body>
+</html>    

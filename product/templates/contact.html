@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #h2
+        {
+            font-family:Cambria;
+            margin-top: 20px;
+            color: blue;
+        }
+
+        #p1
+        {
+            font-size: 20px;
+            font-family:Cambria;
+        }
+
+        #b1
+        {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body id="b1">
+    {% extends 'navbar.html' %}
+
+{% block content %}
+
+    <h2 id="h2"><b>Woolen Store</b></h2>
+    <P id="p1">Name:S**** B******</P>
+    <p id="p1">Mobile no.:8*********</p>
+    <p id="p1">Address:Pune</p>
+
+
+{% endblock %}
+</body>
+</html>
